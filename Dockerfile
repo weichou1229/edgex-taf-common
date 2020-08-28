@@ -42,8 +42,9 @@ RUN echo "**** install Python ****" && \
     pip3 install -U robotbackgroundlogger  &&  \
     pip3 install -U configparser  &&  \
     pip3 install -U requests  &&  \
-    pip3 install -U robotframework-requests  &&  \
-    pip3 install -U paho-mqtt  &&  \
-    apk add --no-cache py3-numpy
+    pip3 install -U robotframework-requests  && \
+    pip3 install -U paho-mqtt && \
+    apk add --no-cache py3-numpy && \
+    apk add --no-cache py3-psutil
 
 ENTRYPOINT ["sh", "/usr/local/bin/robot-entrypoint.sh"]
